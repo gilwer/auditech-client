@@ -19,7 +19,10 @@ export class AppComponent {
                        { field: 'state' },
                        { field: 'title' },
                        { field: 'body' },
-                       { field: 'user' },
+                       { field: 'user',
+                          valueGetter: (params) => {
+                           return params['data']['user']['login'];
+                         }},
                        { field: 'created_at' },
                        { field: 'updated_at' },
 
